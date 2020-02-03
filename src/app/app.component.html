@@ -8,6 +8,14 @@
       </ion-header>
       <ion-content>
         <ion-list>
+          <ion-menu-toggle auto-hide="false" (click)="openUMBLink()">
+            <ion-item >
+              <ion-icon slot="start" [name]="'md-globe'"></ion-icon>
+              <ion-label>
+                Pagina Institucional
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
